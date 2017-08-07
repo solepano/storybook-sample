@@ -3,7 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@auth0/styleguide-components": "^2.0.2",
+    "@auth0/styleguide-core": "^2.0.6",
+    "classnames": "^2.2.5",
+    "moment": "^2.18.1",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
+    "react-bootstrap": "^0.31.2",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.10"
   },
