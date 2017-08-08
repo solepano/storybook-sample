@@ -22,6 +22,8 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@storybook/react": "^3.2.3"
+    "@storybook/addon-storyshots": "^3.2.3",
+    "@storybook/react": "^3.2.3",
+    "react-test-renderer": "^15.6.1"
   }
 }
