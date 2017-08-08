@@ -1,21 +1,36 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render } from 'enzyme';
 
 import TicketsPage from './TicketsPage';
 
-//const setup = props => shallow(<FreeAccountAlert {...props} />);
-
 describe('TicketsPage Structural with Enzyme', () => {
 	describe('when loading tickets', () => {
-	  const wrapper = shallow(<TicketsPage loading tickets={[]} />);
+	  const wrapper = render(<TicketsPage loading tickets={[]} />);
 
 	  it('should render spinner only', () => {
-	  	console.log(wrapper.html());
+	  	//console.log(wrapper.html());
 	    expect(wrapper.find('h1').text()).toEqual('Your Tickets');
-	    wrapper.find('div.spinner').first().debug();
-	    expect(wrapper.children().find('div').length).toBe(1);
-	    console.log(wrapper.children(1).html());
-	    expect(wrapper.find('div.spinner').length).toBe(1);
+	    expect(wrapper.find('.spinner').length).toEqual(1);
+	  });
+
+	});
+	describe('when there is an error', () => {
+	  const wrapper = render(<TicketsPage error='mock err' tickets={[]} />);
+
+	  it('should render error alert', () => {
+	  	//console.log(wrapper.html());
+	    expect(wrapper.find('p').text()).toEqual('mock err');
+	    expect(wrapper.find('.alert').length).toEqual(1);
+	  });
+
+	});
+
+	describe('when there are no tickets', () => {
+	  const wrapper = render(<TicketsPage tickets={[]} />);
+
+	  it('should render error alert', () => {
+	  	console.log(wrapper.html());
+	    expect(wrapper.find('p').text()).toEqual('There are no tickets.');
 	  });
 
 	});
