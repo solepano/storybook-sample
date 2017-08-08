@@ -28,11 +28,25 @@ describe('TicketsPage Structural with Enzyme', () => {
 	describe('when there are no tickets', () => {
 	  const wrapper = render(<TicketsPage tickets={[]} />);
 
-	  it('should render error alert', () => {
-	  	console.log(wrapper.html());
+	  it('should render empty message', () => {
+	  	//console.log(wrapper.html());
 	    expect(wrapper.find('p').text()).toEqual('There are no tickets.');
+	    //expect(wrapper.html()).toMatchSnapshot();
 	  });
 
 	});
 });
 
+// import React from 'react';
+// import renderer from 'react-test-renderer';
+// import TicketsPage from './TicketsPage';
+
+// describe('TicketsPage (Snapshot)', () => {
+// 	describe('when there are no tickets', () => {
+// 	  it('should render empty message', () => {
+// 	    const component = renderer.create(<TicketsPage tickets={[]} />);
+// 	    const json = component.toJSON();
+// 	    expect(json).toMatchSnapshot();
+// 	  });
+//   });
+// });
