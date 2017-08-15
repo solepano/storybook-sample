@@ -9,14 +9,14 @@ It contains examples for performing structural test on the same component using:
 
 ## To run it locally
 
-*Install*
+### Install
 
 ```sh
 npm i
 ```
 Installs dependencies
 
-*Run storybook*
+### Run storybook
 
 ```sh
 npm run storybook
@@ -25,26 +25,27 @@ Runs the Storybook in the development mode.
 Open http://localhost:6006 to view it in the browser.
 The page will reload if you make edits.
 
-*Run tests*:
+### Run tests
 
 ```sh
 npm test
 ```
 Launches the test runner in the interactive watch mode.
 
-*Build static version of Storybook*:
+### Build static version of Storybook
 
 ```sh
 npm run build-storybook
 ```
 Generates a static version of the Storybook and puts it in the `.out` folder.
 
-*Deploy Storybook*
+### Deploy Storybook
 
 ```sh
 npm run deploy-storybook
 ```
 Deploys the Storybook to GitHub Pages.
+
 
 -------
 
